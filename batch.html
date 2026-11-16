@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PolyPoth · Batch Record</title><link rel="stylesheet" href="style.css"></head><body>
+<header><nav><b>PolyPoth</b><a href="index.html">Home</a></nav></header>
+<main><section id="out" style="border:0"></section></main>
+<footer>Scan result · PolyPoth batch-level traceability</footer>
+<script src="data.js"></script><script>
+const id=(new URLSearchParams(location.search).get("id")||"").toUpperCase(),b=(window.BATCHES||{})[id],o=document.getElementById("out");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+if(!b){o.innerHTML='<h1>Batch not found</h1><p class="lead">No record for “'+esc(id||"—")+'”. Check the QR code or contact PolyPoth.</p>';}
+else{
+o.innerHTML=`<span class="badge">${esc(id)}</span><h1>Your paving batch record</h1><p class="lead">${esc(b.status)}</p>
+${b.demo?'<div class="banner"><b>Demo data.</b> This is an example record from our prototype. Final values will come from independent lab testing.</div>':''}
+<div class="grid"><div class="card"><div class="mut">Source factory</div><div class="big">${esc(b.sourceFactory)}</div></div>
+<div class="card"><div class="mut">Accepted plastic</div><div class="big">${b.acceptedKg} kg ${esc(b.plasticType)}</div></div>
+<div class="card"><div class="mut">Paving produced</div><div class="big">${b.areaSqFt} sq ft</div></div>
+<div class="card"><div class="mut">Quality status</div><div class="big" style="font-size:1.1rem">${esc(b.qc)}</div></div></div>
+<h2 style="margin-top:30px">Strength &amp; performance</h2><div class="tw"><table><tr><th>Test</th><th>Target</th><th>Result</th></tr>
+${b.tests.map(t=>`<tr><td>${esc(t.name)}</td><td>${esc(t.target)}</td><td>${esc(t.result)}</td></tr>`).join("")}</table></div>
+<p><b>Suitable for:</b> ${esc(b.loadClass)}</p>
+<h2>Composition</h2><div class="tw"><table>${Object.entries(b.composition).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("")}</table></div>
+<h2>Recovery record</h2><p><b>${b.recoveredKg} kg</b> of industrial plastic was weighed, registered and recovered into this batch. Production date: ${esc(b.productionDate)}.</p>
+<p class="mut">The QR code is batch-level or order-level, not a tag on every paver.</p>`;}
+</script><script src="config.js"></script><script src="chat.js"></script></body></html>

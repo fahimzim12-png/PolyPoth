@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PolyPoth · A Paving Block with a Receipt</title><meta name="description" content="Recycled-plastic paving blocks with batch-level QR traceability.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><nav><b>PolyPoth</b><a href="#product">Product</a><a href="#trace">Traceability</a><a href="#plan">Business plan</a><a href="#roadmap">Roadmap</a></nav></header>
+<main>
+<section><h1>A Paving Block with a Receipt</h1>
+<p class="lead">PolyPoth turns suitable industrial plastic waste into durable paving blocks, and every batch comes with a QR-linked recovery record.</p>
+<a class="btn" href="batch.html?id=PP-0001">View a sample batch record</a></section>
+
+<section id="product"><h2>The product</h2><p class="mut">Recycled-plastic paving blocks for developers, contractors and property owners.</p>
+<div class="grid"><div class="card"><div class="big">30 : 70</div><h3>PE to sand base mix</h3><p class="mut">1.80 kg recycled HDPE/LDPE + 4.20 kg sand per sq ft</p></div>
+<div class="card"><div class="big">0.5%</div><h3>Basalt fibre</h3><p class="mut">0.03 kg per sq ft, for strength and lower water absorption</p></div>
+<div class="card"><div class="big">≥ 20 MPa</div><h3>Strength target</h3><p class="mut">Compressive strength, light-traffic use</p></div>
+<div class="card"><div class="big">&lt; 1.5%</div><h3>Water absorption target</h3><p class="mut">Plus UV and temperature durability testing</p></div></div>
+<div class="banner">Targets are development goals. Lab results will be published here once testing is complete.</div></section>
+
+<section id="trace"><h2>How traceability works</h2>
+<div class="grid"><div class="card"><h3>1. Assess</h3><p class="mut">Factory waste-stream assessment</p></div><div class="card"><h3>2. Weigh</h3><p class="mut">Collect and weigh accepted PE</p></div>
+<div class="card"><h3>3. Register</h3><p class="mut">Identify material, register batch</p></div><div class="card"><h3>4. Produce</h3><p class="mut">Production and quality-control record</p></div>
+<div class="card"><h3>5. Scan</h3><p class="mut">QR-linked report for the customer</p></div></div>
+<p style="margin-top:22px"><b>Try it:</b> scan this demo QR with your phone.</p><div id="qr"></div>
+<p><a href="batch.html?id=PP-0001">Or open the sample record</a></p></section>
+
+<section id="plan"><h2>Business plan</h2>
+<div class="grid"><div class="card"><div class="big">৳51.3 Cr</div><h3>TAM</h3><p class="mut">2,229 projects × 4,000 sq ft × ৳57.50</p></div>
+<div class="card"><div class="big">৳30.8 Cr</div><h3>SAM</h3><p class="mut">60% of TAM</p></div>
+<div class="card"><div class="big">৳8.63 Cr</div><h3>Year 5 SOM</h3><p class="mut">1.5 million sq ft</p></div>
+<div class="card"><div class="big">৳3 Cr</div><h3>Funding</h3><p class="mut">Facility, machinery, testing, runway</p></div></div>
+<h3 style="margin-top:26px">Customers and pricing</h3><div class="tw"><table><tr><th>Segment</th><th>Role</th><th>Price (৳/sq ft)</th></tr>
+<tr><td>B2B: developers &amp; contractors</td><td>Primary</td><td>60</td></tr><tr><td>B2G: public projects</td><td>Primary</td><td>52</td></tr><tr><td>B2C: plot owners</td><td>Secondary</td><td>57</td></tr></table></div>
+<h3 style="margin-top:26px">Five-year forecast (৳ lakh)</h3><div class="tw"><table><tr><th></th><th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th><th>Y5</th></tr>
+<tr><td>Sales (sq ft)</td><td>100k</td><td>300k</td><td>600k</td><td>1M</td><td>1.5M</td></tr>
+<tr><td>Revenue</td><td>57.5</td><td>172.5</td><td>345</td><td>575</td><td>862.5</td></tr>
+<tr><td>Operating result</td><td>–57.03</td><td>–33.09</td><td>–0.18</td><td>41.70</td><td>92.55</td></tr></table></div></section>
+
+<section id="roadmap"><h2>Roadmap</h2>
+<div class="grid"><div class="card"><span class="badge">Year 1</span><p>Build, certify and validate</p></div><div class="card"><span class="badge">Year 2</span><p>Launch and prove with customers</p></div>
+<div class="card"><span class="badge">Year 3</span><p>Scale to break-even</p></div><div class="card"><span class="badge">Year 4</span><p>PolyPoth Learning Centre for 100 children</p></div>
+<div class="card"><span class="badge">Year 5</span><p>Gradual expansion: Nepal, India, Bhutan</p></div></div></section>
+</main><footer>Team PolyPoth · Hult Prize at BUP 2026-27</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>try{new QRCode(document.getElementById("qr"),{text:new URL("batch.html?id=PP-0001",location.href).href,width:160,height:160})}catch(e){document.getElementById("qr").textContent="QR unavailable offline"}</script>
+<script src="config.js"></script><script src="chat.js"></script></body></html>
