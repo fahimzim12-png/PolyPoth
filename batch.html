@@ -20,4 +20,4 @@ ${b.tests.map(t=>`<tr><td>${esc(t.name)}</td><td>${esc(t.target)}</td><td>${esc(
 <h2>Composition</h2><div class="tw"><table>${Object.entries(b.composition).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("")}</table></div>
 <h2>Recovery record</h2><p><b>${b.recoveredKg} kg</b> of industrial plastic was weighed, registered and recovered into this batch. Production date: ${esc(b.productionDate)}.</p>
 <p class="mut">The QR code is batch-level or order-level, not a tag on every paver.</p>`;}
-</script></body></html>
+</script><script src="chat.js"></script></body></html>
